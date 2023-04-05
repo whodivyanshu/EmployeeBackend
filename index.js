@@ -3,13 +3,17 @@ const mongoose = require("mongoose");
 const cors = require("cors");
 const app = express();
 const uuid = require("uuid")
+
+require('dotenv').config();
 app.use(cors());
 app.use(express.json());
 mongoose
-  .connect("mongodb+srv://divyanshuloharcs:12348765@employeedb.g3rlsp2.mongodb.net/EmployeeDB?retryWrites=true&w=majority")
+  .connect(process.env.MONGODB_URL, {
+    useNewUrlParser: true,
+    useUnifiedTopology: true
+  })
   .then(() => console.log("mongodb connected"))
   .catch((err) => console.log(err));
-
 const employeeSchema = new mongoose.Schema({
     _id2: String,
     _id: String,
