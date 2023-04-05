@@ -26,7 +26,7 @@ const employeeSchema = new mongoose.Schema({
 
 const Employee = mongoose.model("Employee", employeeSchema);
 
-app.delete("/api/delete/:_id", async (req, res) => {
+app.delete("/delete/:_id", async (req, res) => {
     try {
       await Employee.findByIdAndDelete(req.params._id);
       res.send({status: "ok"});
@@ -36,7 +36,7 @@ app.delete("/api/delete/:_id", async (req, res) => {
     }
   });
 
-app.post("/api/submit", (req,res)=>{
+app.post("/submit", (req,res)=>{
     console.log(req.body);
     // res.send("hello");
     const newEmployee = new Employee({
@@ -63,7 +63,7 @@ app.get("/getData", async(req,res)=>{
     }
 })
 
-app.put("/api/update/:_id", async (req, res) => {
+app.put("/update/:_id", async (req, res) => {
   try {
     const employee = await Employee.findById(req.params._id);
     employee.name = req.body.name;
