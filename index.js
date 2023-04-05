@@ -77,6 +77,6 @@ app.put("/api/update/:_id", async (req, res) => {
 });
 
 
-app.listen(2000, ()=>{
+app.listen(process.env.port || 2000, ()=>{
     console.log("server started at port 2000");
 });
