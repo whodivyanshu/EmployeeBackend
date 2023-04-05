@@ -1,0 +1,21 @@
+{
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "firebase": "^9.19.1",
+    "mongoose": "^7.0.2",
+    "nodemon": "^2.0.21",
+    "uuid": "^9.0.0"
+  },
+  "name": "employeedb",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon index.js",
+    "build": "npm i"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}
