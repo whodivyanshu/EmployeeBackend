@@ -38,6 +38,7 @@ app.delete("/api/delete/:_id", async (req, res) => {
 
 app.post("/api/submit", (req,res)=>{
     console.log(req.body);
+    res.send("hello");
     const newEmployee = new Employee({
         _id2: uuid.v4(),
         _id: uuid.v4(),
