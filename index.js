@@ -56,7 +56,7 @@ app.get("/getData", async(req,res)=>{
     try{
         const allData = await Employee.find();
         res.send({status: "ok", data: allData})
-        res.send(allData);
+        // res.send(allData);
     } catch(error){
         console.log(error);
         res.status(500).send({status: "error"});
