@@ -36,7 +36,7 @@ app.delete("/delete/:_id", async (req, res) => {
     }
   });
 
-app.post("/submit", (req,res)=>{
+app.post("/create", (req,res)=>{
     console.log(req.body);
     // res.send("hello");
     const newEmployee = new Employee({
