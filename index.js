@@ -38,6 +38,7 @@ app.delete("/delete/:_id", async (req, res) => {
 
 app.post("/create", (req,res)=>{
     console.log(req.body);
+    
     // res.send("hello");
     const newEmployee = new Employee({
         _id2: uuid.v4(),
@@ -49,7 +50,7 @@ app.post("/create", (req,res)=>{
         status: req.body.status,
     });
     newEmployee.save();
-    res.send({status: "ok"});
+    res.send({status: "ok"},"hello");
 });
 
 app.get("/getData", async(req,res)=>{
