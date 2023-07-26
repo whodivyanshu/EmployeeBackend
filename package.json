@@ -15,7 +15,7 @@
   "main": "index.js",
   "scripts": {
     "test": "jest",
-    "dev": "nodemon index.js",
+    "dev": "node index.js",
     "start": "node index.js"
   },
   "author": "",
